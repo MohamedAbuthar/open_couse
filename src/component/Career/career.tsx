@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { Heart, Briefcase, BookOpen, Users } from 'lucide-react';
 import Header from '../common/headersection';
 import Footer from '../common/footersection';
@@ -115,6 +117,12 @@ function CardFooter({ className, ...props }: CardFooterProps) {
 }
 
 export default function CareerPage() {
+  const router = useRouter();
+
+  const handleApplyClick = () => {
+    router.push('/contact');
+  };
+
   const benefits = [
     {
       icon: Heart,
@@ -229,12 +237,14 @@ export default function CareerPage() {
                       </div>
                       <p className="text-sm text-gray-600">{position.employment}</p>
                     </div>
-                    <button className={`px-6 py-2.5 rounded-lg font-semibold transition-colors whitespace-nowrap ml-4 ${
-                      position.type === "Open"
-                        ? "bg-red-600 text-white hover:bg-red-700"
-                        : " text-gray-600 cursor-not-allowed"
-                    }`}
-                    disabled={position.type === ""}>
+                    <button 
+                      onClick={handleApplyClick}
+                      className={`px-6 py-2.5 rounded-lg font-semibold transition-colors whitespace-nowrap ml-4 ${
+                        position.type === "Open"
+                          ? "bg-red-600 text-white hover:bg-red-700"
+                          : "text-gray-600 cursor-not-allowed"
+                      }`}
+                      disabled={position.type !== "Open"}>
                       {position.type === "Open" ? "Apply Now" : ""}
                     </button>
                   </div>

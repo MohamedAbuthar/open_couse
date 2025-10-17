@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { GraduationCap, Video, BookOpen, FileText } from 'lucide-react';
 import Header from '../common/headersection';
 import Footer from '../common/footersection';
@@ -119,6 +121,12 @@ const courses = [
 ];
 
 export default function LearnAndGrow() {
+  const router = useRouter();
+
+  const handleBecomeInstructor = () => {
+    router.push('/contact');
+  };
+
   return (
     <>
     <Header />
@@ -226,7 +234,7 @@ export default function LearnAndGrow() {
           <p className="text-gray-600 text-lg mb-8">
             Share your expertise by creating educational content for our community.
           </p>
-          <button className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition">
+          <button onClick={handleBecomeInstructor} className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition">
             Become an Instructor
           </button>
         </div>
