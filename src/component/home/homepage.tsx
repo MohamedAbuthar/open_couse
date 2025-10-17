@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+import { useRouter } from 'next/navigation'; // Replace react-router-dom with next/navigation
 import { ArrowRight, Code, Users, Leaf, Eye, Github, ExternalLink, Brain, Zap, Cpu, Bot } from 'lucide-react';
 import Header from '../common/headersection';
 import Footer from '../common/footersection';
@@ -62,6 +64,16 @@ const CardContent = ({ children, className = '', ...props }: CardProps) => (
 );
 
 export default function OpenCauseLanding() {
+  const router = useRouter(); // Replace useNavigate with useRouter
+
+  const handleExploreEvents = () => {
+    router.push('/events'); // Replace navigate with router.push
+  };
+
+  const handleViewProducts = () => {
+    router.push('/product'); // Add this function for product routing
+  };
+
   return (
     <>
     <Header/>
@@ -95,10 +107,10 @@ export default function OpenCauseLanding() {
 
             {/* CTA Buttons */}
             <div className="flex gap-4 justify-center">
-              <Button size="lg">
+              <Button size="lg" onClick={handleExploreEvents}>
                 Explore Events <ArrowRight className="w-5 h-5" />
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" onClick={handleViewProducts}>
                 View Products
               </Button>
             </div>
