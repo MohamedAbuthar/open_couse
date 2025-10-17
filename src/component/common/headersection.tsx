@@ -12,8 +12,8 @@ const Header: React.FC = () => {
   };
 
   const navigationItems = [
-    { href: '/', label: 'Home' },
-    { href: '/products', label: 'Products' },
+    { href: '/home', label: 'Home' },
+    { href: '/product', label: 'Products' },
     { href: '/data', label: 'Data' },
     { href: '/education', label: 'Education' },
     { href: '/research', label: 'Research' },

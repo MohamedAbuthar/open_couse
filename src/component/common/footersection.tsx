@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Button } from '@/component/ui/button';
 import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 
@@ -16,9 +17,11 @@ const Footer: React.FC = () => {
                 Monthly digest of the latest updates about open source projects, events, and educational programs. Subscribe to stay connected.
               </p>
               <div className="flex gap-3">
-                <Button className="bg-red-500 hover:bg-red-600 text-white">
-                  Subscribe
-                </Button>
+                <Link href="/contact">
+                  <Button className="bg-red-500 hover:bg-red-600 text-white">
+                    Subscribe
+                  </Button>
+                </Link>
                 <Button variant="outline" className="text-gray-900 border-gray-300">
                   RSS Feed
                 </Button>
@@ -78,24 +81,24 @@ const Footer: React.FC = () => {
               <h3 className="font-semibold text-white mb-4">About Us</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/our-story" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Our Story
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/team" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Team
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/partners" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Partners
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -105,24 +108,24 @@ const Footer: React.FC = () => {
               <h3 className="font-semibold text-white mb-4">Programs</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/programs/open-source" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Open Source Products
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/programs/open-data" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Open Data
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/programs/education" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Education
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/programs/research" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Research
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -132,24 +135,24 @@ const Footer: React.FC = () => {
               <h3 className="font-semibold text-white mb-4">Community</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/community/events" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Events
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/community/career" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Career
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/community/contribute" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Contribute
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Get Involved
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -159,24 +162,24 @@ const Footer: React.FC = () => {
               <h3 className="font-semibold text-white mb-4">Legal</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Terms of Service
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Code of Conduct
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/legal/licenses" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Licenses
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
