@@ -1,11 +1,16 @@
+'use client';
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/component/ui/card';
 import { Button } from '@/component/ui/button';
 import { Calendar, MapPin, Users, ExternalLink } from 'lucide-react';
 import HeaderSection from '@/component/common/headersection';
 import FooterSection from '@/component/common/footersection';
+import router from 'next/router';
+import { useRouter } from 'next/navigation';
 
 export default function CommunityEventsPage() {
+    const router = useRouter();
+
   const upcomingEvents = [
     {
       type: "Meetup",
@@ -134,7 +139,8 @@ export default function CommunityEventsPage() {
                       {event.description}
                     </p>
                     {event.status === "Open" && (
-                      <Button className="w-full bg-red-600 hover:bg-red-700 text-white">
+                      <Button className="w-full bg-red-600 hover:bg-red-700 text-white"
+                      onClick={() => router.push('/contact')}>
                         Register Now
                         <ExternalLink className="w-4 h-4 ml-2" />
                       </Button>
@@ -183,7 +189,8 @@ export default function CommunityEventsPage() {
             <p className="text-gray-600 text-lg max-w-3xl mx-auto mb-8">
               Organize a meetup or workshop in your city. We &apos;ll help you with resources and promotion.
             </p>
-            <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-base">
+            <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-base"
+            onClick={() => router.push('/contact')}>
               Get Started
             </Button>
           </div>

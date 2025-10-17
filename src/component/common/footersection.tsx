@@ -81,17 +81,17 @@ const Footer: React.FC = () => {
               <h3 className="font-semibold text-white mb-4">About Us</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/our-story" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/aboutas" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Our Story
                   </Link>
                 </li>
                 <li>
-                  <Link href="/team" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/aboutas" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Team
                   </Link>
                 </li>
                 <li>
-                  <Link href="/partners" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/aboutas" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Partners
                   </Link>
                 </li>
@@ -108,22 +108,22 @@ const Footer: React.FC = () => {
               <h3 className="font-semibold text-white mb-4">Programs</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/programs/open-source" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/product" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Open Source Products
                   </Link>
                 </li>
                 <li>
-                  <Link href="/programs/open-data" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/data" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Open Data
                   </Link>
                 </li>
                 <li>
-                  <Link href="/programs/education" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/Education" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Education
                   </Link>
                 </li>
                 <li>
-                  <Link href="/programs/research" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/research" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Research
                   </Link>
                 </li>
@@ -135,12 +135,12 @@ const Footer: React.FC = () => {
               <h3 className="font-semibold text-white mb-4">Community</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/community/events" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="events" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Events
                   </Link>
                 </li>
                 <li>
-                  <Link href="/community/career" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/career" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Career
                   </Link>
                 </li>

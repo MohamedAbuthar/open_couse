@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+import { useRouter } from "next/navigation";
 import { Database, Table, FileText, Download } from 'lucide-react';
 import HeaderSection from '@/component/common/headersection';
 import FooterSection from '@/component/common/footersection';
@@ -6,6 +8,8 @@ import { Button } from '../ui/button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../ui/card';
 
 export default function OpenDataPage() {
+  const router = useRouter();
+
   const datasets = [
     {
       icon: <Database className="w-6 h-6" />,
@@ -163,7 +167,10 @@ export default function OpenDataPage() {
           <p className="text-gray-600 text-lg mb-8">
             Have a dataset that could benefit the community? Share it with us.
           </p>
-          <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-base">
+          <Button 
+            className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-base"
+            onClick={() => router.push('/contact')}
+          >
             Submit Dataset
           </Button>
         </div>
