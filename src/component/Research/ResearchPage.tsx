@@ -6,6 +6,7 @@ import HeaderSection from '@/component/common/headersection';
 import FooterSection from '@/component/common/footersection';
 
 export default function ResearchInnovationPage() {
+    
   const focusAreas = [
     {
       title: "AI Ethics & Fairness",
