@@ -1,8 +1,11 @@
+'use client'; // Add this at the top for client component
+
 import React from 'react';
 import { MessageSquare, Heart, BarChart3, Clipboard, Sprout, Trees, Building2, GraduationCap, Users, Globe } from 'lucide-react';
 import { Button } from '@/component/ui/button';
 import Header from '../common/headersection';
 import Footer from '../common/footersection';
+import { useRouter } from 'next/navigation'; // Use Next.js navigation
 
 interface ProductCardProps {
   icon: React.ComponentType<{ className?: string }>;
@@ -67,6 +70,8 @@ interface Product {
 }
 
 export default function ProductsPage() {
+  const router = useRouter(); // Use Next.js router
+
   const products: Product[] = [
     {
       icon: MessageSquare,
@@ -150,6 +155,10 @@ export default function ProductsPage() {
     }
   ];
 
+  const handleGetInTouch = () => {
+    router.push('/contact'); // Use Next.js navigation
+  };
+
   return (
     <>
       <Header/>
@@ -188,7 +197,11 @@ export default function ProductsPage() {
               <Button className="bg-red-600 hover:bg-red-700 h-11 px-8">
                 View on GitHub
               </Button>
-              <Button variant="outline" className="border-gray-300 h-11 px-8">
+              <Button 
+                variant="outline" 
+                className="border-gray-300 h-11 px-8"
+                onClick={handleGetInTouch}
+              >
                 Get in Touch
               </Button>
             </div>
