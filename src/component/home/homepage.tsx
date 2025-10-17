@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { useRouter } from 'next/navigation'; // Replace react-router-dom with next/navigation
+import { useRouter } from 'next/navigation';
 import { ArrowRight, Code, Users, Leaf, Eye, Github, ExternalLink, Brain, Zap, Cpu, Bot } from 'lucide-react';
 import Header from '../common/headersection';
 import Footer from '../common/footersection';
@@ -52,7 +52,7 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Card = ({ children, className = '', ...props }: CardProps) => (
-  <div className={`bg-white rounded-xl border border-gray-200 shadow-sm ${className}`} {...props}>
+  <div className={`bg-white rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${className}`} {...props}>
     {children}
   </div>
 );
@@ -64,14 +64,14 @@ const CardContent = ({ children, className = '', ...props }: CardProps) => (
 );
 
 export default function OpenCauseLanding() {
-  const router = useRouter(); // Replace useNavigate with useRouter
+  const router = useRouter();
 
   const handleExploreEvents = () => {
-    router.push('/events'); // Replace navigate with router.push
+    router.push('/events');
   };
 
   const handleViewProducts = () => {
-    router.push('/product'); // Add this function for product routing
+    router.push('/product');
   };
 
   return (
@@ -170,9 +170,9 @@ export default function OpenCauseLanding() {
                 description: 'Every project we undertake aims to create meaningful, lasting impact in education, technology, art, and social good.',
               },
             ].map((item, idx) => (
-              <Card key={idx}>
+              <Card key={idx} className="hover:border-red-200 hover:shadow-md">
                 <CardContent className="p-8">
-                  <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center text-red-600 mb-4">
+                  <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center text-red-600 mb-4 transition-colors duration-300 group-hover:bg-red-100">
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
@@ -271,13 +271,17 @@ export default function OpenCauseLanding() {
                 description: 'Autonomous systems for agriculture, disaster response, and sustainable manufacturing with open-source designs.',
               },
             ].map((item, idx) => (
-              <Card key={idx}>
+              <Card key={idx} className="group hover:border-red-300 hover:shadow-xl cursor-pointer">
                 <CardContent className="p-8">
-                  <div className="w-14 h-14 bg-red-600 rounded-xl flex items-center justify-center text-white mb-6">
+                  <div className="w-14 h-14 bg-red-600 rounded-xl flex items-center justify-center text-white mb-6 transition-all duration-300 group-hover:bg-red-700 group-hover:scale-110">
                     {item.icon}
                   </div>
-                  <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                  <h3 className="text-2xl font-semibold mb-3 transition-colors duration-300 group-hover:text-red-600">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
+                    {item.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -394,19 +398,23 @@ export default function OpenCauseLanding() {
                 description: 'Built by communities, for communities. Open collaboration ensures long-term maintenance and continuous improvement.',
               },
             ].map((item, idx) => (
-              <div key={idx} className="text-center">
-                <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto">
+              <div key={idx} className="text-center group cursor-pointer">
+                <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center text-white mb-6 mx-auto transition-all duration-300 group-hover:bg-red-700 group-hover:scale-110">
                   {item.icon}
                 </div>
-                <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-2xl font-semibold mb-4 transition-colors duration-300 group-hover:text-red-600">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
 
-          <div className="max-w-3xl mx-auto mt-16 p-8 bg-white ">
+          <div className="max-w-3xl mx-auto mt-16 p-8 bg-white rounded-xl transition-all duration-300 hover:shadow-lg">
             <p className="text-lg italic text-gray-700 text-center">
-            &quot;When technology is open, innovation knows no boundaries. When
+              &quot;When technology is open, innovation knows no boundaries. When
               innovation is accessible, impact knows no limits.&quot;
             </p>
             <p className="text-gray-500 text-center mt-4">— OpenCause Foundation Philosophy</p>
@@ -436,7 +444,7 @@ export default function OpenCauseLanding() {
               <input
                 type="email"
                 placeholder="your@email.com"
-                className="flex-1 px-4 py-3 rounded-lg border  border-gray-300 bg-white"
+                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 bg-white transition-colors duration-300 hover:border-red-300 focus:border-red-500 focus:outline-none"
               />
               <Button size="lg">Subscribe</Button>
             </div>
