@@ -15,11 +15,11 @@ const Header: React.FC = () => {
     { href: '/home', label: 'Home' },
     { href: '/product', label: 'Products' },
     { href: '/data', label: 'Data' },
-    { href: '/education', label: 'Education' },
+    { href: '/Education', label: 'Education' },
     { href: '/research', label: 'Research' },
     { href: '/career', label: 'Career' },
     { href: '/events', label: 'Events' },
-    { href: '/about', label: 'About' },
+    { href: '/aboutas', label: 'About' },
   ];
 
   return (
