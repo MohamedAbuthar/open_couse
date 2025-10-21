@@ -113,17 +113,17 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/data" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Open Data
                   </Link>
                 </li>
                 <li>
-                  <Link href="/Education" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Education
                   </Link>
                 </li>
                 <li>
-                  <Link href="/research" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Research
                   </Link>
                 </li>
@@ -162,17 +162,17 @@ const Footer: React.FC = () => {
               <h3 className="font-semibold text-white mb-4">Legal</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Terms of Service
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  <Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm">
                     Code of Conduct
                   </Link>
                 </li>
