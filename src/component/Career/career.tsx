@@ -182,31 +182,31 @@ export default function CareerPage() {
     <Header />
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-sm font-medium text-gray-600 mb-4 border border-gray-200 rounded-full inline-block px-4 py-1 mt-5">Join Our Team</p>
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+          <p className="text-xs sm:text-sm font-medium text-gray-600 mb-4 border border-gray-200 rounded-full inline-block px-3 sm:px-4 py-1 mt-5">Join Our Team</p>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4">
             Build Your <span className="text-red-600">Career</span> with Purpose
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-base sm:text-lg text-gray-600 px-4">
             Join a mission-driven team creating open technology for social good. Work on meaningful projects while growing your skills.
           </p>
         </div>
       </section>
 
       {/* Why Join Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Join OpenCause?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 px-4">Why Join OpenCause?</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
                 <Card key={index} className="border-gray-200">
                   <CardContent className="pt-4">
-                    <Icon className="w-12 h-12 text-red-600 mb-4" strokeWidth={1.5} />
-                    <CardTitle className="mb-3">{benefit.title}</CardTitle>
-                    <CardDescription>{benefit.description}</CardDescription>
+                    <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-red-600 mb-4" strokeWidth={1.5} />
+                    <CardTitle className="mb-3 text-base sm:text-lg">{benefit.title}</CardTitle>
+                    <CardDescription className="text-sm">{benefit.description}</CardDescription>
                   </CardContent>
                 </Card>
               );
@@ -216,18 +216,18 @@ export default function CareerPage() {
       </section>
 
       {/* Open Positions Section */}
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12">Open Positions</h2>
-          <div className="space-y-6">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 px-2">Open Positions</h2>
+          <div className="space-y-4 sm:space-y-6">
             {positions.map((position, index) => (
               <Card key={index} className="border-gray-200">
-                <div className="px-6 py-4">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <h3 className="text-xl font-bold text-gray-900">{position.title}</h3>
-                        <span className={`text-xs font-bold px-3 py-1 rounded ${
+                <div className="px-4 sm:px-6 py-4">
+                  <div className="flex flex-col sm:flex-row items-start justify-between mb-4 gap-3">
+                    <div className="flex-1 w-full sm:w-auto">
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
+                        <h3 className="text-lg sm:text-xl font-bold text-gray-900">{position.title}</h3>
+                        <span className={`text-xs font-bold px-2 sm:px-3 py-1 rounded ${
                           position.type === "Open" 
                             ? "bg-red-600 text-white" 
                             : "bg-gray-300 text-gray-700"
@@ -235,11 +235,11 @@ export default function CareerPage() {
                           {position.type}
                         </span>
                       </div>
-                      <p className="text-sm text-gray-600">{position.employment}</p>
+                      <p className="text-xs sm:text-sm text-gray-600">{position.employment}</p>
                     </div>
                     <button 
                       onClick={handleApplyClick}
-                      className={`px-6 py-2.5 rounded-lg font-semibold transition-colors whitespace-nowrap ml-4 ${
+                      className={`w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg font-semibold transition-colors whitespace-nowrap ${
                         position.type === "Open"
                           ? "bg-red-600 text-white hover:bg-red-700"
                           : "text-gray-600 cursor-not-allowed"
@@ -248,10 +248,10 @@ export default function CareerPage() {
                       {position.type === "Open" ? "Apply Now" : ""}
                     </button>
                   </div>
-                  <p className="text-gray-700 mb-4">{position.description}</p>
+                  <p className="text-sm sm:text-base text-gray-700 mb-4">{position.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {position.skills.map((skill, idx) => (
-                      <span key={idx} className="px-3 py-1 bg-gray-100 text-gray-900 text-sm rounded-full font-medium border border-gray-200">
+                      <span key={idx} className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-900 text-xs sm:text-sm rounded-full font-medium border border-gray-200">
                         {skill}
                       </span>
                     ))}
@@ -264,13 +264,13 @@ export default function CareerPage() {
       </section>
 
       {/* Volunteer Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Volunteer Opportunities</h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 px-4">Volunteer Opportunities</h2>
+          <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 px-4">
             Not ready for a full-time commitment? Join us as a volunteer contributor and make an impact in your spare time.
           </p>
-          <button className="px-8 py-3 border-2 border-gray-100 text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+          <button className="w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-gray-100 text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
           onClick={() => router.push('/contact')}>
             Become a Volunteer
           </button>
