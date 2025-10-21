@@ -164,9 +164,13 @@ export default function ProductsPage() {
       <Header/>
       <div className="min-h-screen bg-gray-50">
         {/* Header Section */}
-        <div className="bg-white border-b border-gray-200">
+        <div className="bg-white border-b border-gray-200 py-5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-            <p className="text-sm text-gray-600 mb-2">Open Source Software</p>
+           <div className="inline-block mb-4">
+              <span className="text-sm font-medium text-black bg-white px-3 py-1 rounded-full border">
+                Open Source Software
+              </span>
+            </div>            
             <h1 className="text-5xl font-bold text-gray-900 mb-4">
               Our <span className="text-red-600">Products</span>
             </h1>
