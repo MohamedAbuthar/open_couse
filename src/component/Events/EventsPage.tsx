@@ -102,7 +102,8 @@ export default function CommunityEventsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between mb-12">
               <h2 className="text-4xl font-bold">Upcoming Events</h2>
-              <Button variant="outline">Submit Event</Button>
+              <Button variant="outline"
+              onClick={() => router.push('/contact')}>Submit Event</Button>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
