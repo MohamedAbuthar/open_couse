@@ -18,25 +18,25 @@ interface ProductCardProps {
 
 const ProductCard = ({ icon: Icon, title, category, description, tags, isActive }: ProductCardProps) => {
   return (
-    <div className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-md transition-shadow">
+    <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6 hover:shadow-md transition-shadow">
       <div className="flex justify-between items-start mb-4">
-        <div className="bg-red-50 rounded-lg p-3">
-          <Icon className="w-6 h-6 text-red-600" />
+        <div className="bg-red-50 rounded-lg p-2 sm:p-3">
+          <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-red-600" />
         </div>
         {isActive && (
-          <span className="bg-red-600 text-white text-xs font-medium px-3 py-1 rounded-full">
+          <span className="bg-red-600 text-white text-xs font-medium px-2 sm:px-3 py-1 rounded-full">
             Active
           </span>
         )}
       </div>
       
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+      <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm mb-4">{category}</p>
       <p className="text-gray-700 text-sm mb-6 leading-relaxed">{description}</p>
       
       <div className="flex flex-wrap gap-2 mb-6">
         {tags.map((tag: string, index: number) => (
-          <span key={index} className="bg-white border border-gray-200 rounded px-3 py-1 text-xs font-medium text-gray-700">
+          <span key={index} className="bg-white border border-gray-200 rounded px-2 sm:px-3 py-1 text-xs font-medium text-gray-700">
             {tag}
           </span>
         ))}
@@ -164,17 +164,17 @@ export default function ProductsPage() {
       <Header/>
       <div className="min-h-screen bg-gray-50">
         {/* Header Section */}
-        <div className="bg-white border-b border-gray-200 py-5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <div className="bg-white border-b border-gray-200 py-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 text-center">
            <div className="inline-block mb-4">
-              <span className="text-sm font-medium text-black bg-white px-3 py-1 rounded-full border">
+              <span className="text-xs sm:text-sm font-medium text-black bg-white px-3 py-1 rounded-full border">
                 Open Source Software
               </span>
             </div>            
-            <h1 className="text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Our <span className="text-red-600">Products</span>
             </h1>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">
               Building open-source software that empowers communities, organizations,
               and individuals to create positive social impact.
             </p>
@@ -182,8 +182,8 @@ export default function ProductsPage() {
         </div>
 
         {/* Products Grid */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {products.map((product, index) => (
               <ProductCard key={index} {...product} />
             ))}
@@ -192,9 +192,9 @@ export default function ProductsPage() {
 
         {/* Call to Action Section */}
         <div className="bg-white border-t border-gray-200">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Want to Contribute?</h2>
-            <p className="text-gray-600 text-lg mb-8">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 text-center">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Want to Contribute?</h2>
+            <p className="text-gray-600 text-base sm:text-lg mb-8">
               All our products are open source and welcome contributions from the community.
             </p>
             <div className="flex gap-4 justify-center">
