@@ -16,7 +16,7 @@ export default function CommunityEventsPage() {
       status: "Open",
       title: "OpenCause Meetup - Bangalore",
       date: "25 Jan 2025 · 10:00 AM - 1:00 PM",
-      location: "To Be Announced, Bangalore",
+      location: "Dindigul",
       attendees: "50+ expected",
       description: "Monthly community meetup to discuss open source projects and collaboration opportunities.",
       statusColor: "bg-red-600 text-white",
@@ -27,7 +27,7 @@ export default function CommunityEventsPage() {
       status: "Open",
       title: "Tech for Good Workshop",
       date: "15 Feb 2025 · 2:00 PM - 5:00 PM",
-      location: "TBD, Mumbai",
+      location: "Chennai",
       attendees: "30 expected",
       description: "Hands-on workshop on building technology solutions for social challenges.",
       statusColor: "bg-red-600 text-white",
@@ -38,7 +38,7 @@ export default function CommunityEventsPage() {
       status: "Registration Opens Soon",
       title: "OpenData Hackathon",
       date: "10 Mar 2025 · 9:00 AM - 6:00 PM",
-      location: "Tech Hub Delhi, Delhi",
+      location: "Tirunelveli",
       attendees: "100+ expected",
       description: "48-hour hackathon to build solutions using open data for social impact.",
       statusColor: "bg-white text-black border border-gray-300",
@@ -49,7 +49,7 @@ export default function CommunityEventsPage() {
       status: "Call for Papers Open",
       title: "Research Symposium 2025",
       date: "20 Apr 2025 · Full Day",
-      location: "Online + Bangalore, Hybrid",
+      location: "Thoothukudi",
       attendees: "200+ expected",
       description: "Annual symposium showcasing research in Ed Tech, Art, and Social Innovation.",
       statusColor: "bg-white text-black border border-gray-300",
@@ -61,19 +61,19 @@ export default function CommunityEventsPage() {
     {
       title: "OpenCause Annual Meet 2024",
       date: "Dec 2024",
-      location: "Bangalore",
+      location: "Tirunelveli",
       attendees: "150+"
     },
     {
       title: "Open Source Bootcamp",
       date: "Nov 2024",
-      location: "Online",
+      location: "Dindigul",
       attendees: "80+"
     },
     {
       title: "Community Hack Day",
       date: "Oct 2024",
-      location: "Mumbai",
+      location: "Vilathikulam",
       attendees: "60+"
     }
   ];
