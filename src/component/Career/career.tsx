@@ -270,7 +270,8 @@ export default function CareerPage() {
           <p className="text-lg text-gray-600 mb-8">
             Not ready for a full-time commitment? Join us as a volunteer contributor and make an impact in your spare time.
           </p>
-          <button className="px-8 py-3 border-2 border-gray-100 text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+          <button className="px-8 py-3 border-2 border-gray-100 text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+          onClick={() => router.push('/contact')}>
             Become a Volunteer
           </button>
         </div>
