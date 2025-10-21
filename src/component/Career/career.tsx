@@ -182,7 +182,7 @@ export default function CareerPage() {
     <Header />
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-sm font-medium text-gray-600 mb-4 border border-gray-200 rounded-full inline-block px-4 py-1 mt-5">Join Our Team</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
@@ -195,7 +195,7 @@ export default function CareerPage() {
       </section>
 
       {/* Why Join Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Why Join OpenCause?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -216,7 +216,7 @@ export default function CareerPage() {
       </section>
 
       {/* Open Positions Section */}
-      <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-12">Open Positions</h2>
           <div className="space-y-6">
@@ -264,7 +264,7 @@ export default function CareerPage() {
       </section>
 
       {/* Volunteer Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Volunteer Opportunities</h2>
           <p className="text-lg text-gray-600 mb-8">
