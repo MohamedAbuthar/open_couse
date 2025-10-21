@@ -5,7 +5,6 @@ import { Button } from '@/component/ui/button';
 import { Calendar, MapPin, Users, ExternalLink } from 'lucide-react';
 import HeaderSection from '@/component/common/headersection';
 import FooterSection from '@/component/common/footersection';
-import router from 'next/router';
 import { useRouter } from 'next/navigation';
 
 export default function CommunityEventsPage() {
