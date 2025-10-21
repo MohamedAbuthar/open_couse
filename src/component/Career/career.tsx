@@ -184,7 +184,7 @@ export default function CareerPage() {
       {/* Header Section */}
       <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-sm font-medium text-gray-600 mb-4 border border-gray-200 rounded-full inline-block px-4 py-1">Join Our Team</p>
+          <p className="text-sm font-medium text-gray-600 mb-4 border border-gray-200 rounded-full inline-block px-4 py-1 mt-5">Join Our Team</p>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
             Build Your <span className="text-red-600">Career</span> with Purpose
           </h1>
