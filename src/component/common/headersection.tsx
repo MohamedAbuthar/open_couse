@@ -1,11 +1,12 @@
 'use client'
-import React from 'react';
-import { Github } from 'lucide-react';
+import React, { useState } from 'react';
+import { Github, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const Header: React.FC = () => {
   const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const isActive = (path: string) => {
     return pathname === path;
@@ -22,20 +23,24 @@ const Header: React.FC = () => {
     { href: '/aboutas', label: 'About' },
   ];
 
+  const handleMobileLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
-      <div className="max-w-[2000px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[2000px] mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex items-center justify-between h-16">
           {/* Logo Section */}
-          <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
-            <div className="bg-black rounded-md p-2 flex items-center justify-center w-9 h-9">
-              <span className="text-white font-bold text-base">OC</span>
+          <Link href="/" className="flex items-center gap-2 sm:gap-2.5 hover:opacity-80 transition-opacity">
+            <div className="bg-black rounded-md p-2 flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9">
+              <span className="text-white font-bold text-sm sm:text-base">OC</span>
             </div>
-            <span className="text-xl font-semibold text-gray-900">OpenCause</span>
+            <span className="text-lg sm:text-xl font-semibold text-gray-900">OpenCause</span>
           </Link>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 absolute left-1/2 transform -translate-x-1/2">
             {navigationItems.map((item) => (
               <Link
                 key={item.href}
@@ -51,8 +56,8 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* Right Section */}
-          <div className="flex items-center gap-3">
+          {/* Right Section - Desktop */}
+          <div className="hidden sm:flex items-center gap-2 sm:gap-3">
             <button
               className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
               onClick={() => window.open('https://github.com/your-username/your-repo', '_blank')}
@@ -63,13 +68,70 @@ const Header: React.FC = () => {
             </button>
             <Link
               href="/contribute"
-              className="bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-2.5 rounded-md transition-colors text-[15px]"
+              className="bg-red-500 hover:bg-red-600 text-white font-semibold px-4 sm:px-6 py-2 sm:py-2.5 rounded-md transition-colors text-sm sm:text-[15px]"
+            >
+              Contribute
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6 text-gray-700" />
+            ) : (
+              <Menu className="w-6 h-6 text-gray-700" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden border-t border-gray-200 bg-white">
+          <nav className="px-4 py-4 space-y-1">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={handleMobileLinkClick}
+                className={`block px-4 py-3 rounded-lg font-medium text-[15px] transition-colors ${
+                  isActive(item.href)
+                    ? 'text-red-500 bg-red-50'
+                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          
+          {/* Mobile Actions */}
+          <div className="px-4 pb-4 pt-2 flex flex-col gap-3 sm:hidden border-t border-gray-200">
+            <button
+              className="flex items-center justify-center gap-2 p-3 hover:bg-gray-100 rounded-lg transition-colors border border-gray-200"
+              onClick={() => {
+                window.open('https://github.com/your-username/your-repo', '_blank');
+                setIsMobileMenuOpen(false);
+              }}
+              aria-label="GitHub Repository"
+            >
+              <Github className="w-5 h-5 text-gray-700" />
+              <span className="font-medium text-gray-700">View on GitHub</span>
+            </button>
+            <Link
+              href="/contribute"
+              onClick={handleMobileLinkClick}
+              className="bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-md transition-colors text-center"
             >
               Contribute
             </Link>
           </div>
         </div>
-      </div>
+      )}
     </header>
   );
 };
