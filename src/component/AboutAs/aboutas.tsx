@@ -90,18 +90,18 @@ export default function AboutOpenCause() {
     <Header />
     <div className="min-h-screen bg-gray-50">
       {/* About Section */}
-      <section className="py-20 px-6 text-center">
-        <h1 className="text-5xl font-bold mb-6">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 mt-4">
           About <span className="text-red-600">OpenCause</span>
         </h1>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+        <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto px-4">
           We &apos; re a Section 8 nonprofit democratizing technology for sustainable social impact through open-source innovation.
         </p>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+      <section className="py-12 sm:py-16 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           <Card className="">
             <CardHeader className="">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-600 mb-4">
@@ -133,18 +133,18 @@ export default function AboutOpenCause() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 px-6">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Our Core <span className="text-red-600">Values</span>
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-600 px-4">
               These principles guide every decision we make and every project we build.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
@@ -168,12 +168,12 @@ export default function AboutOpenCause() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12">
             Our <span className="text-red-600">Story</span>
           </h2>
-          <div className="space-y-6 text-gray-700 leading-relaxed">
+          <div className="space-y-4 sm:space-y-6 text-gray-700 leading-relaxed text-sm sm:text-base">
             <p>
               OpenCause Foundation was born from a simple observation: cutting-edge technology often remains locked behind commercial barriers, inaccessible to the communities that need it most.
             </p>
@@ -183,7 +183,7 @@ export default function AboutOpenCause() {
             <p>
               Today, we &apos; re building that better way—one open-source project, one trained fellow, one partnership at a time. Our team of engineers, researchers, and social innovators works alongside NGOs, CSR teams, and local communities to co-create solutions that actually work.
             </p>
-            <p className="font-bold text-lg">
+            <p className="font-bold text-base sm:text-lg">
               We believe the future of technology is open, collaborative, and built for everyone—not just those who can afford it.
             </p>
           </div>
@@ -191,17 +191,17 @@ export default function AboutOpenCause() {
       </section>
 
       {/* Built by Community */}
-      <section className="py-20 px-6">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center mb-8">
             <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-600">
               <Users className="h-8 w-8 text-white" />
             </div>
           </div>
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
             Built by <span className="text-red-600">Community</span>
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 text-base sm:text-lg px-4">
             OpenCause is powered by a diverse team of technologists, social workers, researchers, and volunteers from around the world—united by a shared vision of technology that serves the common good.
           </p>
         </div>
