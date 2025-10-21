@@ -14,7 +14,7 @@ export default function CommunityEventsPage() {
     {
       type: "Meetup",
       status: "Open",
-      title: "OpenCause Meetup - Bangalore",
+      title: "OpenCause Meetup - Dindigul",
       date: "25 Jan 2025 · 10:00 AM - 1:00 PM",
       location: "Dindigul",
       attendees: "50+ expected",
@@ -27,7 +27,7 @@ export default function CommunityEventsPage() {
       status: "Open",
       title: "Tech for Good Workshop",
       date: "15 Feb 2025 · 2:00 PM - 5:00 PM",
-      location: "Chennai",
+      location: "Tindivanam",
       attendees: "30 expected",
       description: "Hands-on workshop on building technology solutions for social challenges.",
       statusColor: "bg-red-600 text-white",
@@ -61,7 +61,7 @@ export default function CommunityEventsPage() {
     {
       title: "OpenCause Annual Meet 2024",
       date: "Dec 2024",
-      location: "Tirunelveli",
+      location: "Thoothukudi",
       attendees: "150+"
     },
     {
@@ -73,7 +73,7 @@ export default function CommunityEventsPage() {
     {
       title: "Community Hack Day",
       date: "Oct 2024",
-      location: "Vilathikulam",
+      location: "Tirunelveli",
       attendees: "60+"
     }
   ];

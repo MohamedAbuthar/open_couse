@@ -52,7 +52,7 @@ export default function ContactPage() {
                   <Mail className="w-6 h-6 text-red-600" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Email Us</h3>
-                <p className="text-gray-600">hello@opencause.org</p>
+                <p className="text-gray-600">opencouse@foundation.org</p>
               </div>
 
               {/* Visit Card */}
@@ -62,9 +62,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Visit Us</h3>
                 <p className="text-gray-600">
-                  123 Innovation Street<br />
-                  Tech Hub, Bangalore 560001<br />
-                  India
+                  97G/4C/1,1st Floor, PSS Jayam Towers, TeachersColony, Tuticorin, Tamilnadu, India, 628008
                 </p>
               </div>
 
@@ -74,7 +72,7 @@ export default function ContactPage() {
                   <Phone className="w-6 h-6 text-red-600" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Call Us</h3>
-                <p className="text-gray-600">+91 12345 67890</p>
+                <p className="text-gray-600">+91 7904210874</p>
               </div>
             </div>
 
