@@ -32,11 +32,12 @@ const Header: React.FC = () => {
       <div className="max-w-[2000px] mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex items-center justify-between h-16">
           {/* Logo Section */}
-          <Link href="/" className="flex items-center gap-2 sm:gap-2.5 hover:opacity-80 transition-opacity">
-            <div className="bg-black rounded-md p-2 flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9">
-              <span className="text-white font-bold text-sm sm:text-base">OC</span>
-            </div>
-            <span className="text-lg sm:text-xl font-semibold text-gray-900">OpenCause</span>
+          <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+              <img 
+                src="/OpenCause final-04.png" 
+                alt="OpenCause Foundation" 
+                className="h-70 sm:h-54 w-auto"
+              />
           </Link>
 
           {/* Desktop Navigation */}
