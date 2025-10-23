@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
               <p className="text-gray-600 mb-6">
                 Write to us at{' '}
                 <a href="mailto:hello@opencause.org" className="text-red-500 hover:text-red-600">
-                  hello@opencause.org
+                  connect@opencausefoundation.org
                 </a>
               </p>
               <div className="flex gap-4">
