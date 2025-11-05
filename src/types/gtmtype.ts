@@ -5,8 +5,8 @@ export interface GoogleAnalyticsProps {
 // Extend Window interface for gtag
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer: Record<string, unknown>[];
+    gtag: (...args: unknown[]) => void;
   }
 }
 
