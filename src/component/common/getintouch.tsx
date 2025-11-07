@@ -52,7 +52,7 @@ export default function ContactPage() {
                   <Mail className="w-6 h-6 text-red-600" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Email Us</h3>
-                <p className="text-gray-600">connect@opencausefoundation.org</p>
+                <p className="text-gray-600">contact@opencausefoundation.org</p>
               </div>
 
               {/* Visit Card */}
